@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input
+{
+ background-color:green;
+}
+button 
+{font-family: 'Arial'; font-size: 20px;}
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body bgcolor=orange>
+
+<h1><center>Credit Card Default Predictor</center></h3>
+
+<div>
+  <form action="{{ url_for('predict')}}"method="post">
+  <label for="LIMITBAL">LIMITBAL</label>
+    <input type="text" id="LIMITBAL" name="LIMITBAL" placeholder="LIMITBAL">
+
+    <label for="EDUCATION">EDUCATION</label>
+    <input type="text" id="EDUCATION" name="EDUCATION" placeholder="EDUCATION">
+    
+     <label for="MARRIAGE">MARRIAGE</label>
+    <input type="text" id="MARRIAGE" name="MARRIAGE" placeholder="MARRIAGE">
+
+    <label for="AGE">AGE</label>
+    <input type="text" id="AGE" name="AGE" placeholder="AGE">
+    
+     <label for="PAY_1">PAY_1</label>
+    <input type="text" id="PAY_1" name="PAY_1" placeholder="PAY_1">
+
+    <label for="BILL_AMT1">BILL_AMT1</label>
+    <input type="text" id="BILL_AMT1" name="BILL_AMT1" placeholder="BILL_AMT1">
+     <label for="BILL_AMT2">BILL_AMT2</label>
+    <input type="text" id="BILL_AMT2" name="BILL_AMT2" placeholder="BILL_AMT2">
+
+    <label for="BILL_AMT3">BILL_AMT3</label>
+    <input type="text" id="BILL_AMT3" name="BILL_AMT3" placeholder="BILL_AMT3">
+    
+     <label for="BILL_AMT4">BILL_AMT4</label>
+    <input type="text" id="BILL_AMT4" name="BILL_AMT4" placeholder="BILL_AMT4">
+
+    <label for="BILL_AMT5">BILL_AMT5</label>
+    <input type="text" id="BILL_AMT5" name="BILL_AMT5" placeholder="BILL_AMT5">
+     <label for="BILL_AMT6">BILL_AMT6</label>
+    <input type="text" id="BILL_AMT6" name="BILL_AMT6" placeholder="BILL_AMT6">
+
+    <label for="PAY_AMT1">PAY_AMT1</label>
+    <input type="text" id="PAY_AMT1" name="PAY_AMT1" placeholder="PAY_AMT1">
+     <label for="PAY_AMT2">PAY_AMT2</label>
+    <input type="text" id="PAY_AMT2" name="PAY_AMT2" placeholder="PAY_AMT2">
+    
+    <label for="PAY_AMT3">PAY_AMT3</label>
+    <input type="text" id="PAY_AMT3" name="PAY_AMT3" placeholder="PAY_AMT3">
+
+    <label for="PAY_AMT4">PAY_AMT4</label>
+    <input type="text" id="PAY_AMT4" name="PAY_AMT4" placeholder="PAY_AMT4">
+    
+     <label for="PAY_AMT5">PAY_AMT5</label>
+    <input type="text" id="PAY_AMT5" name="PAY_AMT5" placeholder="PAY_AMT5">
+
+    <label for="PAY_AMT6">PAY_AMT6</label>
+    <input type="text" id="PAY_AMT6" name="PAY_AMT6" placeholder="PAY_AMT6">
+    
+     <center><button type="submit" class="btn btn-primary btn-block btn-large">Predict</button></center>
+     </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+ </body>
+</html>
